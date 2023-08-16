@@ -1,11 +1,14 @@
+n = int(input("Enter a number:"))
 
-def multiples():
+def multiples(num):
+    list_n=[]
     i = 1
     sum = 0
-    while i < 1000:
-        if (i % 3 == 0) or (i % 5 == 0) :
+    while i < num:
+        if (i % 3 == 0) and (i % 5 == 0) :
             sum = sum + i
+            list_n.append(sum)
         i += 1
-    print(sum)
+    return list_n
 
-multiples()
+print(multiples(n))
